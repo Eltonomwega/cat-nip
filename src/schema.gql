@@ -1,0 +1,28 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type catType {
+  _id: ID!
+  name: String!
+  age: Int!
+  breed: String!
+}
+
+type Query {
+  hello: String!
+  cats: [catType!]!
+  findcat(id: String!): catType!
+}
+
+type Mutation {
+  createCats(input: catInput!): catType!
+  deleteCat(input: String!): catType!
+  updateCat(cat: catInput!, id: String!): catType!
+}
+
+input catInput {
+  name: String!
+  age: Int!
+  breed: String!
+}
